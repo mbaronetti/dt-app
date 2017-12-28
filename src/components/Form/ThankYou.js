@@ -12,6 +12,7 @@ class ThankYou extends React.Component {
    render() {
       return (
           <section className="form-section">
+              <h2>we would love to <br/> hear from you</h2>
               <div className="container form-container">
                   <div className={this.state.messageContainerClass}>
                     <div className="message__icon--success"></div>
