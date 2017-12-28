@@ -1,0 +1,89 @@
+@import "../../_variables";
+$header--height: 60px;  
+@media (max-width: 480px) { 
+    .header{
+        .header__logo{ 
+            position: absolute;
+            z-index: 999;
+            top: 30px;
+            left: 50%;
+            margin-left: -25px;
+        }
+        .header__nav {
+        line-height: 60px;
+        display: inline-block;
+        position: absolute;
+        background: black;
+        z-index: 9;
+        width: 100%;
+        left: 0; 
+        height: 100%;
+        transition: all .15s ease;
+        .burger__button{
+            background-position: -17px -28px;
+        }
+        &.header__nav--hidden{
+            height: 60px;
+            overflow: hidden;
+            .burger__button{
+                background-position: 20px -28px;
+            }
+            a{color:transparent;
+            transition: all .5s ease;}
+        }
+        a{
+            display: block;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.25em;
+            width: 100%;
+            transition: all .5s ease;
+            &.burger__button{
+                display: inline-block;
+                width: 50px;
+            }
+        }
+    }
+    } 
+}
+.header{
+  height: $header--height;
+  background-color: $black;
+    .header__nav{
+        line-height: $header--height;
+        display: inline-block;
+        a{
+            text-decoration: none;
+            color: $light-gray;
+            margin-right: 40px;
+            &.--active{
+                color: $white;
+            }
+            &:hover{
+                color: $red;
+            }
+        }
+    }
+    .header__logo{
+        width: 50px;
+        height: 25px;
+        display: inline-block;
+        background: url(../../icons2x.png);
+        vertical-align: middle;
+        padding: 0 20px;
+        background-size: 200px;
+        background-position: 13px 2px;
+        background-repeat: no-repeat;
+        margin-top: -10px;
+    }
+    .burger__button{
+        display: none;
+        width: 50px;
+        height: 25px;
+        background: url(../../icons2x.png);
+        vertical-align: middle;
+        background-size: 200px;
+        background-position: 20px -28px;
+        background-repeat: no-repeat;
+    }
+} 
